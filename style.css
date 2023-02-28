@@ -28,13 +28,15 @@ centrespan {
   font-size: 56px;
 }
 p {
-  /* Requirement-2.E */
+  /* Requirement-2.D */
   font-style: oblique;
 }
 
-ul {
+body ul {
+  /* Requirement-2.F */
   /* Requirement-2.8 */
   font-style: oblique;
+  list-style-type: none;
 }
 
 body audio {
@@ -44,17 +46,23 @@ body audio {
   float: center; /* Requirement-2.11*/
 }
 
+a {
+  /* Requirement-2.E */
+  font-size: 1cm; /* Requirement-2.9 */
+}
 .musicDesc {
   font-family: Helvetica; /* Requirement-2.1 */
   float: center; /* Requirement-2.11*/
   clear: left;
 }
 .musicTitle {
+  /* Requirement-2.C */
   font-family: Arial, Helvetica, sans-serif;
   font-variant-caps: all-petite-caps;
   font-size: 32px;
-  text-shadow: 1px 1px 2px rgb(62, 146, 23), 0 0 1em rgb(231, 105, 214), 0 0 0.2em blue;
-  letter-spacing: 0.2rem; /* Requirement-2.2 */ /* Requirement-2.9 */
+  text-shadow: 1px 1px 2px rgb(62, 146, 23), 0 0 1em rgb(231, 105, 214),
+    0 0 0.2em blue;
+  letter-spacing: 0.2rem; /* Requirement-2.2 */
 }
 
 .arts {
@@ -72,4 +80,24 @@ body audio {
 
 .homepageDesc {
   display: block; /* Requirement-2.12*/
+}
+
+.indexPort {
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+details {
+  font-family: monospace;
+}
+
+summary {
+  font-family: monospace;
+}
+
+article {
+  margin-left: 12cm;
+  margin-right: 12cm;
+  font-family: monospace;
+  font-size: 18px;
 }
