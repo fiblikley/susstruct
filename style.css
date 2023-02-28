@@ -26,6 +26,7 @@ body {
 centrespan {
   font-style: oblique;
   font-size: 56px;
+  position: relative; /* Requirement-2.15 */
 }
 p {
   /* Requirement-2.D */
@@ -43,7 +44,7 @@ body audio {
   /* Requirement-2.B */
   border-style: dashed;
   border-color: rgb(222, 243, 104);
-  float: center; /* Requirement-2.11*/
+  float: inherit; /* Requirement-2.11*/
 }
 
 a {
@@ -52,8 +53,8 @@ a {
 }
 .musicDesc {
   font-family: Helvetica; /* Requirement-2.1 */
-  float: center; /* Requirement-2.11*/
-  clear: left;
+  float: inherit; /* Requirement-2.11*/
+  clear: left; /* Requirement-2.13*/
 }
 .musicTitle {
   /* Requirement-2.C */
@@ -66,7 +67,9 @@ a {
 }
 
 .arts {
-  float: center;
+  float: inherit;
+  visibility: visible; /* Requirement-2.16 */
+  z-index: -1; /* Requirement-2.17 */
 }
 .chaosTitle {
   font-family: monospace;
@@ -85,19 +88,23 @@ a {
 .indexPort {
   flex-flow: row nowrap;
   align-items: center;
+  width: auto; /* Requirement-2.7*/
 }
 
 details {
+  /* Requirement-2.G */
   font-family: monospace;
 }
 
 summary {
+  /* Requirement-2.H */
   font-family: monospace;
 }
 
 article {
-  margin-left: 12cm;
-  margin-right: 12cm;
+  margin-left: 6cm;
+  margin-right: 6cm;
   font-family: monospace;
   font-size: 18px;
+  overflow: auto; /* Requirement-2.14*/
 }
